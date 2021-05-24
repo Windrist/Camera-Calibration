@@ -4,6 +4,8 @@ import cv2
 if __name__ == "__main__":
     # Camera configuration
     cap = cv2.VideoCapture(0)
+    cap.set(3, 1280)
+    cap.set(4, 720)
     count = 0
     
     while True:

@@ -31,7 +31,7 @@ class calculateDistance(object):
         cv2.namedWindow("Get Points")
         cv2.setMouseCallback('Get Points', self.getMouseClicks)
         while True:
-            image = cv2.imread('./raw/origin.jpg')
+            image = cv2.imread('./raw/3.jpg')
             resize_image = cv2.resize(image, (1280, 720), interpolation=cv2.INTER_AREA)
             cv2.imshow("Get Points", resize_image)
             if cv2.waitKey(1) & 0xFF == ord("q"):
@@ -60,7 +60,7 @@ class calculateDistance(object):
         return ans
 
     def distanceBetweenTwoPixels(self):
-        p1 = self.realDistanceCalculator(self.pointd1[0], self.pointd2[1])
+        p1 = self.realDistanceCalculator(self.pointd1[0], self.pointd1[1])
         p2 = self.realDistanceCalculator(self.pointd2[0], self.pointd2[1])
         aux = p2 - p1
         self.pointd1.clear()
