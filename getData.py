@@ -41,9 +41,10 @@ class detectConfiguration(object):
             self.confirmedImagesCounter += 1
 
             self.capturedImagePoints[self.confirmedImagesCounter] = self.currentCorners
-            if self.currentCorners[0,0,0]<self.currentCorners[-1,0,0]:
-                capturedObjectPoints=self.capturedObjectPointsLR
-            else:capturedObjectPoints=self.capturedObjectPointsRL
+            if self.currentCorners[0, 0, 0] < self.currentCorners[-1, 0, 0]:
+                capturedObjectPoints = self.capturedObjectPointsLR
+            else:
+                capturedObjectPoints = self.capturedObjectPointsRL
             self.objectPoints[self.confirmedImagesCounter] = capturedObjectPoints
 
             h = self.computeHomography(self.currentCorners, capturedObjectPoints)
