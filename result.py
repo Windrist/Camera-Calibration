@@ -47,7 +47,7 @@ class calculateDistance(object):
                 dist = np.sqrt(aux[0]**2 + aux[1]**2)
                 print('\33[1m' + '\33[34m' + 'Calculated distance in Size (mm) = {}'.format(dist) + '\33[0m')
                 self.interrupt = False
-            if cv2.waitKey(1) & 0xFF == ord("q"):
+            if cv2.waitKey(0):
                 break
 
     def realDistanceCalculator(self, x, y):

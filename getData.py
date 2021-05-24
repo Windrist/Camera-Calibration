@@ -21,7 +21,7 @@ class detectConfiguration(object):
         x, y = square_size, square_size   # Size of square on the Checkerboard in mm
 
         # Object Points in 3D
-        self.capturedObjectPointsLR = [[i*x, j*y, 0] for i in range(self.points_in_row,0,-1) for j in range(self.points_in_column,0,-1)]
+        self.capturedObjectPointsLR = [[i*x, j*y, 0] for i in range(self.points_in_row, 0, -1) for j in range(self.points_in_column, 0, -1)]
         self.capturedObjectPointsRL = list(reversed(self.capturedObjectPointsLR))
 
     def processImage(self):
