@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
 
+# Config Variables - Enter their values according to your Object Image
+image_name = '3.jpg' # Image Name
+
 class calculateDistance(object):
     def __init__(self) -> None:
         super().__init__()
@@ -31,7 +34,7 @@ class calculateDistance(object):
         cv2.namedWindow("Get Points")
         cv2.setMouseCallback('Get Points', self.getMouseClicks)
         while True:
-            image = cv2.imread('./raw/3.jpg')
+            image = cv2.imread('./raw/' + image_name)
             resize_image = cv2.resize(image, (1280, 720), interpolation=cv2.INTER_AREA)
             cv2.imshow("Get Points", resize_image)
             if cv2.waitKey(1) & 0xFF == ord("q"):
